@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishva | Actor Profile</title>
+    <style>
+        /* --- Base Styles (Mobile First) --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #ffffff;
+            background-color: #000;
+            /* Fallback */
+        }
+
+        /* FIXED: Changed to handle the div background correctly */
+        .bgimg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120vh;
+            z-index: -1;
+            background-image: url('image/vbla.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+            /* Slightly more transparent on mobile to see the image */
+            background-color: rgba(0, 0, 0, 0.85);
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #ba8a20;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 2rem;
+        }
+
+        .intro {
+            font-style: italic;
+            color: #ba8a20;
+            /* Matching the accent color */
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .section-title {
+            grid-column: 1 / -1;
+            background: #333;
+            /* Darker, more professional grey */
+            color: #fff;
+            padding: 8px 15px;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-item {
+            border-bottom: 1px solid #333;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .info-item strong {
+            color: #ba8a20;
+        }
+
+        .acting-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .acting-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .acting-list span {
+            color: #ba8a20;
+            font-weight: bold;
+        }
+
+        .skills-tag {
+            display: inline-block;
+            background: #ba8a20;
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 5px 5px 5px 0;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        /* --- Tablet and Desktop (min-width: 768px) --- */
+        @media (min-width: 768px) {
+            body {
+                flex-direction: row;
+            }
+
+            .bgimg {
+                width: 50%;
+            }
+
+            .container {
+                width: 50%;
+                margin-left: 50%;
+                padding: 40px 60px;
+                background-color: rgba(0, 0, 0, 0.95);
+                /* Darker on desktop for readability */
+            }
+
+            .grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bgimg"></div>
+
+    <div class="container">
+        <header>
+            <h1>VISHVA</h1>
+            <p class="intro">Theatre Artist & Screen Actor</p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">Sharing my profile for your kind consideration.</p>
+        </header>
+
+        <div class="grid">
+            <div class="section-title">Physical Attributes</div>
+            <div class="info-item"><strong>Age:</strong> 23</div>
+            <div class="info-item"><strong>Height:</strong> 5'6"</div>
+            <div class="info-item"><strong>Weight:</strong> 50 kg</div>
+            <div class="info-item"><strong>Complexion:</strong> Fair</div>
+            <div class="info-item"><strong>Eye Colour:</strong> Black</div>
+            <div class="info-item"><strong>Hair Colour:</strong> Black</div>
+
+            <div class="section-title">Personal Details</div>
+            <div class="info-item"><strong>Current City:</strong> Chennai</div>
+            <div class="info-item"><strong>Education:</strong> B.Com (Marketing)</div>
+            <div class="info-item"><strong>Languages:</strong> Tamil, English, Telugu</div>
+            <div class="info-item"><strong>Driving:</strong> 2 & 4 Wheeler</div>
+
+            <div class="section-title">Acting Credits</div>
+            <div style="grid-column: 1 / -1;">
+                <ul class="acting-list">
+                    <li><strong>Rangoli</strong> — <span>Abdul</span></li>
+                    <li><strong>Inspector Rishi</strong> — <span>Sathya</span></li>
+                    <li><strong>SP Cinemas Series</strong> — <span>Paun</span></li>
+                    <li><strong>Madras Matinee</strong> — <span>Dinesh</span></li>
+                    <li><strong>Chennai Love Story</strong> — <span>Vignash</span></li>
+                </ul>
+            </div>
+
+            <div class="section-title">Special Skills</div>
+            <div style="grid-column: 1 / -1; padding-top: 10px;">
+                <span class="skills-tag">Dancing</span>
+                <span class="skills-tag">Gymnastics</span>
+                <span class="skills-tag">Stage Acting</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
