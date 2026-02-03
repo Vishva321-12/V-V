@@ -318,7 +318,7 @@ nav {
   width: 100%;
 }
 
-/* Creating the fade-out effect on the left and right sides */
+
 .slider-container::before,
 .slider-container::after {
   content: "";
@@ -341,21 +341,21 @@ nav {
 
 .logo-track {
   display: flex;
-  width: max-content; /* Adjust based on logo width * total logos */
-  animation: scroll 30s linear infinite;
+  width: max-content;
+  animation: scroll 20s linear infinite;
 }
 
 .logo-track img {
-  width: 250px; /* Fixed width for consistency */
+  width: 250px; 
   height: 100px;
   object-fit: contain;
   padding: 0 40px;
 }
 
-/* This makes it move! */
+
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* Moves by exactly half the logos */
+  100% { transform: translateX(-50%); } 
 }
 
 /* Contact Section */
