@@ -302,6 +302,62 @@ nav {
   font-style: italic;
 }
 
+/*.....Production Section.........*/
+
+.slider-title{
+  text-align: center;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
+.slider-container {
+  overflow: hidden;
+  padding: 60px 0;
+  background: rgb(0, 0, 0);
+  position: relative;
+  width: 100%;
+}
+
+/* Creating the fade-out effect on the left and right sides */
+.slider-container::before,
+.slider-container::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 150px;
+  z-index: 2;
+  top: 0;
+}
+
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(0,0,0,) 0%,rgba(0, 0, 0, 0) 100%);
+}
+
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to left,rgb(0,0,0,) 0%,rgba(0, 0, 0, 0) 100%);
+}
+
+.logo-track {
+  display: flex;
+  width: max-content; /* Adjust based on logo width * total logos */
+  animation: scroll 30s linear infinite;
+}
+
+.logo-track img {
+  width: 250px; /* Fixed width for consistency */
+  height: 100px;
+  object-fit: contain;
+  padding: 0 40px;
+}
+
+/* This makes it move! */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Moves by exactly half the logos */
+}
+
 /* Contact Section */
 .contact-section {
   max-width: 100%;
@@ -433,6 +489,17 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+
+  .logo-track img {
+    width: 200px; /* Slightly smaller than desktop */
+    height: 80px;
+    padding: 0 30px; /* Tighter spacing */
+  }
+
+  .slider-container::before,
+  .slider-container::after {
+    width: 120px; /* Narrower fade effect */
+  }
 }
 
 /* Mobile Responsive */
@@ -528,5 +595,33 @@ footer {
   .work-note {
     font-size: 1rem;
     margin: 40px 0 30px;
+  }
+
+  .slider-container {
+    padding: 30px 0; /* Less padding on top/bottom */
+  }
+
+  .logo-track img {
+    width: 150px; /* Smaller logos for smaller screens */
+    height: 60px;
+    padding: 0 20px; /* Less space between logos */
+  }
+
+  /* Shrink the fade effect so it doesn't hide the logos on small screens */
+  .slider-container::before,
+  .slider-container::after {
+    width: 80px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-track img {
+    width: 120px;
+    height: 50px;
+  }
+  
+  .slider-container::before,
+  .slider-container::after {
+    width: 50px;
   }
 }

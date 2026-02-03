@@ -26,5 +26,7 @@ const observer = new IntersectionObserver((entries) => {
 photos.forEach(photo => observer.observe(photo));
 
 
+const track = document.querySelector('.logo-track');
+track.innerHTML += track.innerHTML;
 
 
