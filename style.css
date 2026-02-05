@@ -133,7 +133,7 @@ nav {
 }
 
 .discover-btn:hover {
-  border: 3px solid rgb(224, 132, 11);
+  border: 2px solid #ecb73b;
   color: #000;
 }
 
@@ -230,17 +230,37 @@ nav {
   color: #000;
 }
 
-/* My Work Section */
-
-.slide-wrapper{
-  position: relative;
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
+/* The Break Line */
+.break {
+  border: 2px solid #cfa70a;
+  width: 70%;
   align-items: center;
+  margin: 20px auto;
 }
 
-.work-slider{
+/* My Work Section */
+
+
+.work-hedding {
+  text-align: center;
+  margin-top: 15px;
+  padding-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-weight: 300;
+}
+
+.slide-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.work-slider {
   overflow: hidden;
   width: 100%;
   border-radius: 12px;
@@ -248,7 +268,7 @@ nav {
 
 .My-work {
   max-width: 1200px;
-  margin: 80px auto;
+  margin: 20px auto;
   padding: 40px 20px;
 }
 
@@ -260,8 +280,10 @@ nav {
 }
 
 .work-grid {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
   transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 .work-item {
@@ -275,7 +297,8 @@ nav {
 }
 
 /* Navigation Buttons Styling */
-.prev-btn, .next-btn{
+.prev-btn,
+.next-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -285,14 +308,19 @@ nav {
   padding: 10px;
   cursor: pointer;
   z-index: 10;
-  border-radius: 50px;
   color: #000;
 }
 
-.prev-btn {left: -60px;}
-.next-btn {right: -60px;}
+.prev-btn {
+  left: -60px;
+}
 
-.prev-btn:hover, .next-btn:hover{
+.next-btn {
+  right: -60px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
   background-color: #dabf82;
 }
 
@@ -335,10 +363,15 @@ nav {
 
 /*.....Stories Told in Motion.........*/
 
-.slider-title{
+.slider-title {
   text-align: center;
   margin-top: 15px;
   padding-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-weight: 300;
 }
 
 .slider-container {
@@ -362,12 +395,12 @@ nav {
 
 .slider-container::before {
   left: 0;
-  background: linear-gradient(to right, rgb(0,0,0,) 0%,rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to right, rgb(0, 0, 0, ) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .slider-container::after {
   right: 0;
-  background: linear-gradient(to left,rgb(0,0,0,) 0%,rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to left, rgb(0, 0, 0, ) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .logo-track {
@@ -377,7 +410,7 @@ nav {
 }
 
 .logo-track img {
-  width: 250px; 
+  width: 250px;
   height: 100px;
   object-fit: contain;
   padding: 0 40px;
@@ -385,8 +418,13 @@ nav {
 
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } 
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Contact Section */
@@ -485,72 +523,196 @@ footer {
 /* Tablet Responsive */
 /* Tablet Responsive (1024px) */
 @media (max-width: 1024px) {
-  h1 { font-size: 2rem; margin-top: 100px; }
-  .photo-grid { grid-template-columns: repeat(2, 1fr); }
-  .photo-grid img:nth-child(even) { margin-top: 100px; }
-  .container { flex-direction: column; margin: 40px 20px; }
-  .img-small-responsive { position: static; max-width: 100%; margin-top: 20px; }
-  
+  h1 {
+    font-size: 2rem;
+    margin-top: 100px;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photo-grid img:nth-child(even) {
+    margin-top: 100px;
+  }
+
+  .container {
+    flex-direction: column;
+    margin: 40px 20px;
+  }
+
+  .img-small-responsive {
+    position: static;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
   /* Slider specific adjustments */
-  .slider-wrapper { max-width: 85%; } 
-  .prev-btn { left: -40px; }
-  .next-btn { right: -40px; }
+  .slider-wrapper {
+    max-width: 85%;
+  }
+
+  .prev-btn {
+    left: -40px;
+  }
+
+  .next-btn {
+    right: -40px;
+  }
 
   /* IMPORTANT: Ensure work-grid stays a row, NOT a grid */
   .work-grid {
-    display: flex !important; 
-    grid-template-columns: none !important; 
+    display: flex !important;
+    grid-template-columns: none !important;
   }
 }
 
 /* Mobile Responsive (768px) */
 @media (max-width: 768px) {
-  header { width: 100%; box-sizing: border-box; padding: 15px 10px; margin-top: -20px; left: 0; right: 0; }
-  .mobile-menu-toggle { display: flex; }
-  .nav-menu { position: fixed; top: 70px; right: -110%; background: rgba(0, 0, 0, 0.98); flex-direction: column; width: 70%; max-width: 300px; padding: 30px 20px; transition: right 0.3s ease; }
-  .nav-menu.active { right: 0; } /* Fixed this from -100px */
 
-  h1 { font-size: 1.8rem; margin-top: 90px; }
-  .photo-grid { grid-template-columns: 1fr; }
-  .photo-grid img:nth-child(even) { margin-top: 0; }
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    margin-top: -20px;
+    left: 0;
+    right: 0;
+  }
+  
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    right: -110%;
+    background: rgba(0, 0, 0, 0.98);
+    flex-direction: column;
+    width: 70%;
+    max-width: 300px;
+    padding: 30px 20px;
+    transition: right 0.3s ease;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .Learn-btn {
+    align-items: center;
+    text-align: center;
+    margin: 25%;
+
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 90px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-grid img:nth-child(even) {
+    margin-top: 0;
+  }
 
   /* Slider Adjustment */
   .slider-wrapper {
-    max-width: 90%; 
-    margin: 0 auto;
-    position: relative;
+    max-width: 85%;
   }
 
   .work-grid {
-    display: flex !important;
     grid-template-columns: none !important;
   }
 
   .work-item {
-    min-width: 100%; /* Ensures one box fills the slider window */
+    min-width: 100%;
     padding: 15px;
   }
 
-  /* Move arrows INSIDE the box so they don't cause horizontal scrolling */
-  .prev-btn, .next-btn {
-    font-size: 1.2rem;
-    padding: 5px;
-    background-color: rgba(218, 191, 130, 0.7);
-    z-index: 5;
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: block !important;
+    background: #dabf82;
+    padding: 10px;
+    font-size: x-small;
+    margin: 15px;
+    border-radius: 0;
   }
-  .prev-btn { left: 5px; }
-  .next-btn { right: 5px; }
 
-  .work-image-container { height: 200px; }
+  .prev-btn {
+    left: -35px;
+  }
+
+  .next-btn {
+    right: -35px;
+  }
+
+  .work-image-container {
+    height: 200px;
+  }
+
+  .work-hedding {
+    font-size: 15px;
+    letter-spacing: 6px;
+    font-weight: 300;
+  }
+
+  .slider-title {
+    font-size: 13px;
+    letter-spacing: 5px;
+    font-weight: 300;
+  }
 }
 
 /* Small Phone (480px) */
 @media (max-width: 480px) {
-  .slider-wrapper { max-width: 100%; }
-  .work-item { padding: 10px; }
-  .work-image-container { height: 180px; }
-  
+  .slider-wrapper {
+    max-width: 80%;
+  }
+
+  .work-item {
+    padding: 10px;
+  }
+
+  .work-image-container {
+    height: 180px;
+  }
+
   /* Make arrows even smaller or move them slightly */
-  .prev-btn { left: 2px; }
-  .next-btn { right: 2px; }
+  .prev-btn {
+    left: -30px;
+  }
+
+  .next-btn {
+    right: -30px;
+  }
+
+  .work-hedding {
+    font-size: 15px;
+    letter-spacing: 6px;
+    font-weight: 300;
+  }
+
+  .slider-title {
+    font-size: 13px;
+    letter-spacing: 5px;
+    font-weight: 300;
+  }
 }
