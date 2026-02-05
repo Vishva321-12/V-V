@@ -29,4 +29,24 @@ photos.forEach(photo => observer.observe(photo));
 const track = document.querySelector('.logo-track');
 track.innerHTML += track.innerHTML;
 
+//---------My Work Section----------
+
+let currentIndex = 0;
+
+function moveSlide(step){
+const slider = document.querySelector('.work-grid');
+const item = document.querySelectorAll('.work-item');
+const totalItems = item.length;
+
+currentIndex += step;
+
+if (currentIndex >= totalItems){
+    currentIndex = 0;
+}else if (currentIndex < 0){
+    currentIndex = totalItems -1;
+}
+const offset = -currentIndex * 100;
+slider.style.transform = `translateX(${offset}%)`;
+}
+
 
