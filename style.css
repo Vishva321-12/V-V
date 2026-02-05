@@ -483,205 +483,74 @@ footer {
 }
 
 /* Tablet Responsive */
+/* Tablet Responsive (1024px) */
 @media (max-width: 1024px) {
-  h1 {
-    font-size: 2rem;
-    margin-top: 100px;
+  h1 { font-size: 2rem; margin-top: 100px; }
+  .photo-grid { grid-template-columns: repeat(2, 1fr); }
+  .photo-grid img:nth-child(even) { margin-top: 100px; }
+  .container { flex-direction: column; margin: 40px 20px; }
+  .img-small-responsive { position: static; max-width: 100%; margin-top: 20px; }
+  
+  /* Slider specific adjustments */
+  .slider-wrapper { max-width: 85%; } 
+  .prev-btn { left: -40px; }
+  .next-btn { right: -40px; }
+
+  /* IMPORTANT: Ensure work-grid stays a row, NOT a grid */
+  .work-grid {
+    display: flex !important; 
+    grid-template-columns: none !important; 
   }
-
-  .photo-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .photo-grid img:nth-child(even) {
-    margin-top: 100px;
-  }
-
-  .container {
-    flex-direction: column;
-    margin: 40px 20px;
-  }
-
-  .img-small-responsive {
-    position: static;
-    max-width: 100%;
-    margin-top: 20px;
-  }
-
-  .my-story {
-    min-height: auto;
-  }
-
-  .Learn-btn {
-    margin: 20px auto 0;
-  }
-
-
-  .logo-track img {
-    width: 200px; /* Slightly smaller than desktop */
-    height: 80px;
-    padding: 0 30px; /* Tighter spacing */
-  }
-
-  .slider-container::before,
-  .slider-container::after {
-    width: 120px; /* Narrower fade effect */
-  }
-
-  .slider-wrapper {
-    max-width: 80%; /* Let the box be wider on tablets */
-  }
-
-  .prev-btn { left: -45px; }
-  .next-btn { right: -45px; }
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive (768px) */
 @media (max-width: 768px) {
-  header {
-    width: 100%;
+  header { width: 100%; box-sizing: border-box; padding: 15px 10px; margin-top: -20px; left: 0; right: 0; }
+  .mobile-menu-toggle { display: flex; }
+  .nav-menu { position: fixed; top: 70px; right: -110%; background: rgba(0, 0, 0, 0.98); flex-direction: column; width: 70%; max-width: 300px; padding: 30px 20px; transition: right 0.3s ease; }
+  .nav-menu.active { right: 0; } /* Fixed this from -100px */
 
-    box-sizing: border-box;
+  h1 { font-size: 1.8rem; margin-top: 90px; }
+  .photo-grid { grid-template-columns: 1fr; }
+  .photo-grid img:nth-child(even) { margin-top: 0; }
 
-    padding: 15px 10px;
-    margin-top: -20px;
-
-    left: 0;
-    right: 0;
-  }
-
-  .mobile-menu-toggle {
-    display: flex;
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: 70px;
-    right: -110%;
-    background: rgba(0, 0, 0, 0.98);
-    flex-direction: column;
-    width: 70%;
-    max-width: 300px;
-    padding: 30px 20px;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease;
-    gap: 1.5rem;
-  }
-
-  .nav-menu.active {
-    right: -100px;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-    margin-top: 90px;
-    padding: 0 15px;
-  }
-
-  .welcome-text {
-    font-size: 1rem;
-    padding: 0 20px;
-  }
-
-  .discover-btn {
-    padding: 10px 24px;
-    font-size: 0.9rem;
-  }
-
-  .photo-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 15px;
-  }
-
-  .photo-grid img:nth-child(odd),
-  .photo-grid img:nth-child(even) {
-    margin-top: 0;
-  }
-
-  .container {
-    padding: 15px;
-    margin: 30px 15px;
+  /* Slider Adjustment */
+  .slider-wrapper {
+    max-width: 90%; 
+    margin: 0 auto;
+    position: relative;
   }
 
   .work-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
+    display: flex !important;
+    grid-template-columns: none !important;
   }
 
-  .My-work h2,
-  .contact-section h2 {
-    font-size: 2rem;
+  .work-item {
+    min-width: 100%; /* Ensures one box fills the slider window */
+    padding: 15px;
   }
 
-  .contact-section {
-    padding: 40px 15px;
-    margin: 40px 15px;
-  }
-
-  .work-note {
-    font-size: 1rem;
-    margin: 40px 0 30px;
-  }
-
-  .slider-container {
-    padding: 30px 0; /* Less padding on top/bottom */
-  }
-
-  .logo-track img {
-    width: 150px; /* Smaller logos for smaller screens */
-    height: 60px;
-    padding: 0 20px; /* Less space between logos */
-  }
-
-  /* Shrink the fade effect so it doesn't hide the logos on small screens */
-  .slider-container::before,
-  .slider-container::after {
-    width: 80px; 
-  }
-
-  .slider-wrapper {
-    max-width: 90%; /* Take up most of the screen width */
-    margin: 0 auto;
-  }
-
+  /* Move arrows INSIDE the box so they don't cause horizontal scrolling */
   .prev-btn, .next-btn {
-    font-size: 1.5rem;
-    padding: 8px;
-    background-color: rgba(218, 191, 130, 0.9); /* Slightly more solid for visibility */
-  }
-
-  .prev-btn { left: -10px; }
-  .next-btn { right: -10px; }
-
-  .work-image-container {
-    height: 180px; /* Shorter images for mobile screens */
-  }
-
-  .work-item h3 {
     font-size: 1.2rem;
+    padding: 5px;
+    background-color: rgba(218, 191, 130, 0.7);
+    z-index: 5;
   }
+  .prev-btn { left: 5px; }
+  .next-btn { right: 5px; }
 
-  .work-item p {
-    font-size: 0.9rem;
-  }
+  .work-image-container { height: 200px; }
 }
 
+/* Small Phone (480px) */
 @media (max-width: 480px) {
-  .logo-track img {
-    width: 120px;
-    height: 50px;
-  }
+  .slider-wrapper { max-width: 100%; }
+  .work-item { padding: 10px; }
+  .work-image-container { height: 180px; }
   
-  .slider-container::before,
-  .slider-container::after {
-    width: 50px;
-  }
-
-  .slider-wrapper {
-    max-width: 95%;
-  }
-
-  .prev-btn { left: -5px; }
-  .next-btn { right: -5px; }
+  /* Make arrows even smaller or move them slightly */
+  .prev-btn { left: 2px; }
+  .next-btn { right: 2px; }
 }
