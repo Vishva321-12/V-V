@@ -13,6 +13,10 @@ html {
   scroll-behavior: smooth;
 }
 
+#home {
+  padding-top: 1px;
+}
+
 header {
   display: flex;
   justify-content: space-around;
@@ -831,11 +835,11 @@ footer {
   }
 
   .prev-btn {
-    left: -50px !important;
+    left: -35px;
   }
 
   .next-btn {
-    right: -50px !important;
+    right: -35px;
   }
 
   .work-image-container {
