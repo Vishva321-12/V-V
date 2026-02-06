@@ -25,120 +25,141 @@
   </header>
 
   <!----actors---showcase-->
-  <section id="home"></section>
-  <h1>Vishva | Actor's Showcase</h1>
-  <p class="welcome-text">I believe every character has a story, and every performance is a chance to connect,
-    inspire, and move hearts.
-    Explore my journey, portfolio, and vision as an artist.</p>
+  <section id="home">
+    <h1>Vishva | Actor's Showcase</h1>
+    <p class="welcome-text">I believe every character has a story, and every performance is a chance to connect,
+      inspire, and move hearts.
+      Explore my journey, portfolio, and vision as an artist.
+    </p>
 
-  <div class="btn-container">
-    <a href="profile.html" class="discover-btn">Discover More</a>
-  </div>
-
-  <!------Photo--Gallery-->
-
-  <div class="photo-grid">
-    <img src="image/v1.jpg" alt="Photo 1" class="photo">
-    <img src="image/v2@.jpg" alt="Photo 2" class="photo">
-    <img src="image/v4.jpg" alt="Photo 3" class="photo">
-    <img src="image/v2!.jpg" alt="Photo 4" class="photo">
-  </div>
-
-  <!-----container------->
-  <div class="container">
-    <!-- Left big image -->
-    <div class="left">
-      <img src="image/rano.jpg" alt="Big Image">
+    <!---------The Black and White IMG-->
+    <div class="black-whitemg">
+      <img src="image/V1111.jpg" alt="Vishva Actor Portrait">
     </div>
-    <!-- Right content -->
-    <div class="my-story">
-      <h2>My Story</h2>
-      <p>I began my journey as a junior artist and, after two years of dedication,
-        earned my big screen breakthrough in 2023 with the film <em>Rangoli</em>,
-        playing <strong>Abdul</strong>, the friend of the lead character.</p>
-      <a href="https://photos.app.goo.gl/gB4iqivnTUSbvnYW8" class="Learn-btn">Lookbook</a>
-      <img class="img-small-responsive" src="image/vishvaport.jpg" alt="Description">
+
+    <!-----Discover More---------->
+    <div class="btn-container">
+      <a href="profile.html" class="discover-btn">Discover More</a>
     </div>
-  </div>
+
+    <!------Photo--Gallery-->
+    <div class="photo-grid">
+      <img src="image/v1.jpeg" alt="Vishva Portfolio Photo 1" class="photo">
+      <img src="image/v2@.jpg" alt="Vishva Portfolio Photo 2" class="photo">
+      <img src="image/v4.jpg" alt="Vishva Portfolio Photo 3" class="photo">
+      <img src="image/v2!.jpg" alt="Vishva Portfolio Photo 4" class="photo">
+    </div>
+
+    <!-----container------->
+    <div class="container">
+      <!-- Left big image -->
+      <div class="left">
+        <img src="image/rano.jpg" alt="Vishva in Rangoli Film">
+      </div>
+      <!-- Right content -->
+      <div class="my-story">
+        <div class="story-heading">
+          <h2>My Story</h2>
+          <p>I began my journey as a junior artist and, after two years of dedication,
+            earned my big screen breakthrough in 2023 with the film <em>Rangoli</em>,
+            playing <strong>Abdul</strong>, the friend of the lead character.
+          </p>
+        </div>
+
+        <h3 class="portfolio">View Full Portfolio</h3>
+        <div class="lookbookslider">
+          <div class="wrapper-slide" id="slide">
+            <div class="lookImg"><img src="image/vishvaport.jpg" alt="Vishva Portfolio Image 1"></div>
+            <div class="lookImg"><img src="image/vV4.jpg" alt="Vishva Portfolio Image 2"></div>
+            <div class="lookImg"><img src="image/Vclean.jpg" alt="Vishva Portfolio Image 3"></div>
+
+            <div class="link-slid">
+              <a href="https://photos.app.goo.gl/gB4iqivnTUSbvnYW8" class="lookbook-btn">See All</a>
+            </div>
+          </div>
+
+          <div class="sorybtn">
+            <button class="slider-btn prev" onclick="moveSlide(-1)" aria-label="Previous slide">&#10094;</button>
+            <button class="slider-btn next" onclick="moveSlide(1)" aria-label="Next slide">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-
-
   <!-------Stories Told in Motion-------->
-
-<section class="logo-section">
-  <div class="slider-title">
-    <h3>"Stories told in motion"</h3>
-  </div>
-
-  <div class="slider-container">
-    <div class="logo-track">
-      <img src="image/MM.Logo.png" alt="Brand 1">
-      <img src="image/RR.Logo.png" alt="Brand 2">
-      <img src="image/IR.Logo.png" alt="Brand 3">
-
-      <img src="image/MM.Logo.png" alt="Brand 1">
-      <img src="image/RR.Logo.png" alt="Brand 2">
-      <img src="image/IR.Logo.png" alt="Brand 3">
-
+  <section class="logo-section">
+    <div class="slider-title">
+      <h3>"Stories told in motion"</h3>
     </div>
-  </div>
+
+    <div class="slider-container">
+      <div class="logo-track">
+        <img src="image/MM.Logo.png" alt="Madras Matinee Logo">
+        <img src="image/RR.Logo.png" alt="Rangoli Logo">
+        <img src="image/IR.Logo.png" alt="Inspector Rishi Logo">
+
+        <img src="image/MM.Logo.png" alt="Madras Matinee Logo">
+        <img src="image/RR.Logo.png" alt="Rangoli Logo">
+        <img src="image/IR.Logo.png" alt="Inspector Rishi Logo">
+      </div>
+    </div>
   </section>
 
   <div class="break"></div>
 
   <!-----------My--Work-------------->
   <section id="work" class="My-work">
-  <h3 class="work-hedding">"The Screening Room"</h3>
+    <h3 class="work-hedding">"The Screening Room"</h3>
 
-  <div class="slide-wrapper">
-    <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+    <div class="slide-wrapper">
+      <button class="prev-btn" onclick="moveWorkSlide(-1)" aria-label="Previous work">&#10094;</button>
 
-    <div class="work-slider">
-      <div class="work-grid">
-        <div class="work-item">
-          <div class="work-image-container">
+      <div class="work-slider">
+        <div class="work-grid">
+          <div class="work-item">
             <a href="https://youtu.be/LohOGaqFw1g?si=obKj67vVk5-iHLI8" target="_blank" style="text-decoration: none;">
-              <img src="image/rano.jpg" alt="Rangoli Movie" class="work-image">
+              <div class="work-image-container">
+                <img src="image/rano.jpg" alt="Rangoli Movie" class="work-image">
+              </div>
+              <h3>Rangoli</h3>
+              <p>I played the role of Abdul, the friend of the lead character. Even in this brief role,
+                I was able to explore subtle emotions and contribute to the story's flow, which gave me
+                valuable experience as an actor.</p>
+            </a>
           </div>
-          <h3>Rangoli</h3>
-          <p>I played the role of Abdul, the friend of the lead character. Even in this brief role,
-            I was able to explore subtle emotions and contribute to the story's flow, which gave me
-            valuable experience as an actor.</p>
-        </div></a>
 
-        <div class="work-item">
-          <div class="work-image-container">
+          <div class="work-item">
             <a href="https://www.google.com/search?gs_ssp=eJzj4tVP1zc0rDTOKTHJzSszYPTiz8wrLkhNLskvUijKLM7IBACoWQrw&q=inspector+rishi&oq=inspector&gs_lcrp=EgZjaHJvbWUqDwgCEC4YQxixAxiABBiKBTIPCAAQABhDGLEDGIAEGIoFMgYIARBFGDkyDwgCEC4YQxixAxiABBiKBTIKCAMQLhixAxiABDIPCAQQLhhDGLEDGIAEGIoFMgwIBRAAGEMYgAQYigUyBwgGEAAYgAQyDAgHEAAYQxiABBiKBTIMCAgQLhhDGIAEGIoFMgcICRAAGIAE0gEINzIwNmowajmoAgawAgHxBQU6h47cfKfu&sourceid=chrome&ie=UTF-8"
               target="_blank" style="text-decoration: none;">
-              <img src="image/IR.jpg" alt="Inspector Rishi" class="work-image">
+              <div class="work-image-container">
+                <img src="image/IR.jpg" alt="Inspector Rishi" class="work-image">
+              </div>
+              <h3>Inspector Rishi</h3>
+              <p>I portrayed Young Sathya, a young tribal boy. The role gave me the chance to step into a
+                unique character and experience a different side of storytelling.</p>
+            </a>
           </div>
-          <h3>Inspector Rishi</h3>
-          <p>I portrayed Young Sathya, a young tribal boy. The role gave me the chance to step into a
-            unique character and experience a different side of storytelling.</p>
-        </div></a>
 
-        <div class="work-item">
-          <div class="work-image-container">
+          <div class="work-item">
             <a href="https://youtu.be/F_LRE9Bfaw0?si=18SWDq1JgYtN2Kc-" target="_blank" style="text-decoration: none;">
-              <img src="image/mm.jpg" alt="Madras Matinee" class="work-image">
+              <div class="work-image-container">
+                <img src="image/mm.jpg" alt="Madras Matinee" class="work-image">
+              </div>
+              <h3>Madras Matinee</h3>
+              <p>Played the role of Dinesh (Son of Kaali Venkat), focusing on a performance that balanced simplicity with
+                significant narrative impact.</p>
+            </a>
           </div>
-          <h3>Madras Matinee</h3>
-          <p>"Played the role of Dinesh (Son of Kaali Venkat), focusing on a performance that balanced simplicity with
-            significant narrative impact."
-          </p>
-        </div></a>
+        </div>
       </div>
+      <button class="next-btn" onclick="moveWorkSlide(1)" aria-label="Next work">&#10095;</button>
     </div>
-    <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
-  </div>
   </section>
-
 
   <div class="work-note">
     <p>A lot of projects are ongoing and will be uploaded shortly.</p>
   </div>
-
 
   <!-----------Contact-------------->
   <section id="contact" class="contact-section">
@@ -148,18 +169,23 @@
     <div class="contact-container">
       <div class="contact-links">
         <div class="contact-item">
-          <a href="mailto:contactactorvishva@gmail.com" class="contact-link"><i class="fa-regular fa-envelope"></i>
-            Email</a>
+          <a href="mailto:contactactorvishva@gmail.com" class="contact-link">
+            <i class="fa-regular fa-envelope" id="email"></i>
+            Email
+          </a>
         </div>
 
         <div class="contact-item">
-          <a href="https://www.instagram.com/vishva_actor/" target="_blank" class="contact-link"><i
-              class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="https://www.instagram.com/vishva_actor/" target="_blank" class="contact-link" id="insta">
+            <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
         </div>
 
         <div class="contact-item">
-          <a href="https://youtube.com/@vishva_actor7489?si=GL1yI_lf422lehX9" target="_blank" class="contact-link"><i
-              class="fa-brands fa-youtube"></i> youtube</a>
+          <a href="https://youtube.com/@vishva_actor7489?si=GL1yI_lf422lehX9" target="_blank" class="contact-link"
+            id="youtube">
+            <i class="fa-brands fa-youtube"></i> YouTube
+          </a>
         </div>
       </div>
     </div>
@@ -172,7 +198,6 @@
   <footer>
     <p>&copy; 2026 Vishva. All rights reserved.</p>
   </footer>
-
 
 </body>
 
