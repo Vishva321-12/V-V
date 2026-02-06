@@ -831,11 +831,11 @@ footer {
   }
 
   .prev-btn {
-    left: -35px;
+    left: -50px !important;
   }
 
   .next-btn {
-    right: -35px;
+    right: -50px !important;
   }
 
   .work-image-container {
