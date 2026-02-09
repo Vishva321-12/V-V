@@ -44,10 +44,10 @@
 
     <!------Photo--Gallery-->
     <div class="photo-grid">
-      <img src="image/v1.jpeg" alt="Vishva Portfolio Photo 1" class="photo">
-      <img src="image/v2@.jpg" alt="Vishva Portfolio Photo 2" class="photo">
-      <img src="image/v4.jpg" alt="Vishva Portfolio Photo 3" class="photo">
-      <img src="image/v2!.jpg" alt="Vishva Portfolio Photo 4" class="photo">
+      <img src="image/DSC_V3.jpeg" alt="Photo 1" class="photo">
+      <img src="image/DSC_V1.jpeg" alt="Photo 2" class="photo">
+      <img src="image/v4.jpg" alt="Photo 3" class="photo">
+      <img src="image/DSC_V2.jpeg" alt="Photo 4" class="photo">
     </div>
 
     <!-----container------->
@@ -83,6 +83,7 @@
             <button class="slider-btn next" onclick="moveSlide(1)" aria-label="Next slide">&#10095;</button>
           </div>
         </div>
+        <div id="portfolioDots" class="portfolio-dots"></div>
       </div>
     </div>
   </section>
@@ -120,6 +121,9 @@
           <div class="work-item">
             <a href="https://youtu.be/LohOGaqFw1g?si=obKj67vVk5-iHLI8" target="_blank" style="text-decoration: none;">
               <div class="work-image-container">
+                <video class="work-trailer" autoplay muted loop playsinline poster="image/rano.jpg">
+                  <source src="video/Rangoli Tr.mp4" type="video/mp4">
+                </video>
                 <img src="image/rano.jpg" alt="Rangoli Movie" class="work-image">
               </div>
               <h3>Rangoli</h3>
@@ -133,6 +137,9 @@
             <a href="https://www.google.com/search?gs_ssp=eJzj4tVP1zc0rDTOKTHJzSszYPTiz8wrLkhNLskvUijKLM7IBACoWQrw&q=inspector+rishi&oq=inspector&gs_lcrp=EgZjaHJvbWUqDwgCEC4YQxixAxiABBiKBTIPCAAQABhDGLEDGIAEGIoFMgYIARBFGDkyDwgCEC4YQxixAxiABBiKBTIKCAMQLhixAxiABDIPCAQQLhhDGLEDGIAEGIoFMgwIBRAAGEMYgAQYigUyBwgGEAAYgAQyDAgHEAAYQxiABBiKBTIMCAgQLhhDGIAEGIoFMgcICRAAGIAE0gEINzIwNmowajmoAgawAgHxBQU6h47cfKfu&sourceid=chrome&ie=UTF-8"
               target="_blank" style="text-decoration: none;">
               <div class="work-image-container">
+                <video class="work-trailer" autoplay muted loop playsinline poster="image/IR.jpg">
+                  <source src="video/Inspector Tr.mp4" type="video/mp4">
+                </video>
                 <img src="image/IR.jpg" alt="Inspector Rishi" class="work-image">
               </div>
               <h3>Inspector Rishi</h3>
@@ -144,6 +151,9 @@
           <div class="work-item">
             <a href="https://youtu.be/F_LRE9Bfaw0?si=18SWDq1JgYtN2Kc-" target="_blank" style="text-decoration: none;">
               <div class="work-image-container">
+                <video class="work-trailer" autoplay muted loop playsinline poster="image/mm.jpg">
+                  <source src="video/Madras_Matinee Tr.mp4" type="video/mp4">
+                </video>
                 <img src="image/mm.jpg" alt="Madras Matinee" class="work-image">
               </div>
               <h3>Madras Matinee</h3>
@@ -152,6 +162,7 @@
             </a>
           </div>
         </div>
+        <div class="pagination-dots" id="paginationDots"></div>
       </div>
       <button class="next-btn" onclick="moveWorkSlide(1)" aria-label="Next work">&#10095;</button>
     </div>

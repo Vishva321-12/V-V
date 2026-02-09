@@ -458,18 +458,49 @@ nav {
   background-color: #dabf82;
 }
 
+.pagination-dots {
+  display: flex !important;
+  flex-direction: row !important;
+  /* Forces horizontal state */
+  justify-content: center !important;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+  /* Spans the width of the slide-wrapper */
+  position: relative;
+  left: 0;
+}
+
 .work-image-container {
+  position: relative;
   width: 100%;
   height: 250px;
   overflow: hidden;
   border-radius: 8px;
   margin-bottom: 20px;
+  background: #000;
 }
 
-.work-image {
+.work-trailer {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 1;
+
+}
+
+.work-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .work-item h3 {
@@ -491,6 +522,52 @@ nav {
   font-size: 1.2rem;
   color: #aba5a5;
   font-style: italic;
+}
+
+.portfolio-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 350px;
+  margin-left: auto;
+}
+
+.p-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #555;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid rgba(218, 191, 130, 0.5);
+}
+
+.p-dot.active {
+  background-color: #dabf82;
+  transform: scale(1.3);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #555;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #dabf82;
+  transform: scale(1.2);
+}
+
+.work-slider,
+.lookbookslider {
+  touch-action: pan-y;
+  user-select: none;
 }
 
 /*.....Stories Told in Motion.........*/
@@ -624,7 +701,7 @@ nav {
 }
 
 #insta {
-  display: inline-block;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2px;
@@ -799,12 +876,35 @@ footer {
     margin-top: 90px;
   }
 
+  .sorybtn {
+    display: none !important;
+    /* Hides the prev/next arrows */
+  }
+
+  .lookbookslider {
+    max-width: 100%;
+    /* Allows slider to be bigger on mobile */
+  }
+
   .photo-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .photo-grid img:nth-child(even) {
-    margin-top: 0;
+    margin-top: 50px;
+  }
+
+  .sorybtn {
+    display: none !important;
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .my-story {
+    text-align: center;
   }
 
   .slide-wrapper {
@@ -822,24 +922,15 @@ footer {
 
   .prev-btn,
   .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 100;
-    display: block !important;
-    background: #dabf82;
-    padding: 10px;
-    font-size: 1.2rem;
-    margin: 15px;
-    border-radius: 0;
+    display: none;
   }
 
-  .prev-btn {
-    left: -35px;
+  .slide-wrapper {
+    max-width: 90%;
   }
 
-  .next-btn {
-    right: -35px;
+  .pagination-dots {
+    margin-top: 20px;
   }
 
   .work-image-container {
