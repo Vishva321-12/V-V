@@ -2,9 +2,11 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Montserrat:wght@200;700&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   background-color: #000000;
   color: #e6d8b9;
 }
@@ -38,10 +40,14 @@ header {
 h1 {
   text-align: center;
   margin-top: 120px;
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-size: 2rem;
+  font-family: 'Bebas Neue', sans-serif;
+  /* Classic movie title font */
+  font-weight: 400;
+  letter-spacing: 12px;
+  /* Super wide spacing like a movie poster */
   color: #e6d8b9;
+  text-transform: uppercase;
   opacity: 0;
   filter: blur(8px);
   animation: fadeInClear 1.5s ease forwards;
@@ -110,8 +116,10 @@ nav {
 
 .nav-menu li a {
   text-decoration: none;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   font-weight: 500;
   color: #e6d8b9;
   transition: color 0.3s ease;
@@ -148,14 +156,16 @@ nav {
 
 .discover-btn {
   display: inline-block;
-  padding: 12px 28px;
-  font-size: 1rem;
-  font-weight: 100;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 12px 35px;
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   color: #000000;
   background: #dabf82;
   text-decoration: none;
-  border: 2px solid #191313;
+  border: 1px solid #dabf82;
   transition: all 0.4s ease;
 }
 
@@ -232,11 +242,37 @@ nav {
   margin-right: 10px;
 }
 
-.portfolio {
-  text-align: right;
-  margin-right: 9%;
-  border-bottom: 2px solid #d5ad1c;
+.break-portfolio {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  font-weight: 100;
+  max-width: 800px;
+  margin: 40px auto;
+  color: #d5ad1c;
   font-family: 'Montserrat', sans-serif;
+}
+
+#portfolioTxt {
+  color: #e6d8b9;
+}
+
+/* Creating the lines */
+.break-portfolio::before,
+.break-portfolio::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid #d5ad1c;
+}
+
+/* Creating the gaps between the lines and the text */
+.break-portfolio::before {
+  margin-right: 15px;
+}
+
+.break-portfolio::after {
+  margin-left: 15px;
 }
 
 .lookbookslider {
@@ -361,8 +397,9 @@ nav {
 
 .break {
   border: 2px solid #d5ad1c;
-  width: 70%;
+  width: 80%;
   align-items: center;
+  max-width: 800px;
   margin: 20px auto;
 }
 
@@ -778,7 +815,20 @@ footer {
 }
 
 /* Tablet Responsive (1024px) */
-@media (max-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1071px){
+
+  header {
+    width: 80%;
+
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 90px;
+    display: flex;
+    justify-content: center;
+    padding: 15px 30px;
+  }
+
+
   h1 {
     font-size: 2rem;
     margin-top: 100px;
@@ -867,12 +917,21 @@ footer {
   }
 
   .nav-menu.active {
-    right: 0;
+    right: -100px;
   }
 
   h1 {
-    font-size: 1.8rem;
-    margin-top: 90px;
+    font-size: 1.3rem;
+    /* Scaled down but still prominent */
+    letter-spacing: 6px;
+    /* Reduced spacing so it fits on one line */
+    margin-top: 100px;
+  }
+
+  .discover-btn {
+    padding: 10px 20px;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
   }
 
   .sorybtn {
@@ -882,7 +941,6 @@ footer {
 
   .lookbookslider {
     max-width: 100%;
-    /* Allows slider to be bigger on mobile */
   }
 
   .photo-grid {
@@ -903,9 +961,22 @@ footer {
   }
 
   .lookImg img {
-  width: calc(100% - 60px);
-  
-}
+    width: calc(100% - 60px);
+    height: 100%;
+
+  }
+
+  .break-portfolio {
+    font-size: 1rem;
+  }
+
+  .break-portfolio::before {
+    margin-right: 9px;
+  }
+
+  .break-portfolio::after {
+    margin-left: 9px;
+  }
 
   .my-story {
     text-align: center;
@@ -935,6 +1006,7 @@ footer {
 
   .pagination-dots {
     margin-top: 20px;
+    margin-bottom: 10px;
   }
 
   .work-image-container {
@@ -985,13 +1057,32 @@ footer {
   }
 
   .portfolio {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-left: 0;
     text-align: center;
-    margin-left: 25px;
   }
 }
 
 /* Small Phone (480px) */
 @media (max-width: 480px) {
+
+  h1 {
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    /* Even tighter for very small screens */
+  }
+
+  .welcome-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .portfolio {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+
   .slide-wrapper {
     max-width: 80%;
   }
