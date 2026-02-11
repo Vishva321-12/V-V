@@ -958,6 +958,7 @@ footer {
   .container {
     flex-direction: column;
     text-align: center;
+    margin: 20px;
   }
 
   .lookImg img {
