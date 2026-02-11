@@ -288,7 +288,7 @@ nav {
 
 .wrapper-slide {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   width: 100%;
 }
 
@@ -304,6 +304,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .slider-btn:hover {
@@ -312,26 +313,29 @@ nav {
 
 .lookImg {
   min-width: 100%;
+  width: 100%;
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   background: #1a1a1a;
+  flex-shrink: 0;
+  border-radius: 10px;
 }
 
 .lookImg img {
-  min-width: 100%;
+  width: calc(100% - 100px);
   height: 100%;
-  border-radius: 5px;
-  object-fit: contain;
+  object-fit: fill;
   display: block;
-  border-radius: 10px;
+  flex-shrink: 0;
 }
 
 .link-slid {
   position: relative;
   min-width: 100%;
+  width: 100%;
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
@@ -344,12 +348,7 @@ nav {
 
 #slide {
   display: flex;
-}
-
-.sorybtn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
 }
 
 .prev {
@@ -397,7 +396,7 @@ nav {
 .My-work {
   max-width: 1200px;
   margin: 20px auto;
-  padding: 40px 20px;
+  padding: 40px 0px;
 }
 
 .My-work h2 {
@@ -410,7 +409,7 @@ nav {
 .work-grid {
   display: flex;
   flex-direction: row;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   width: 100%;
 }
 
@@ -903,12 +902,17 @@ footer {
     text-align: center;
   }
 
+  .lookImg img {
+  width: calc(100% - 60px);
+  
+}
+
   .my-story {
     text-align: center;
   }
 
   .slide-wrapper {
-    max-width: 85%;
+    max-width: 100%;
   }
 
   .work-grid {
