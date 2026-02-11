@@ -184,3 +184,13 @@ if (blackWhiteImg && imgSection) {
         blackWhiteImg.style.opacity = 1 - scrollProgress;
     });
 }
+
+//Duplicate the logos to create the seamless "circle"-----------
+const logoTrack = document.getElementById('logo-track');
+if (logoTrack) {
+    const logos = Array.from(logoTrack.children);
+    logos.forEach(logo => {
+        const clone = logo.cloneNode(true);
+        logoTrack.appendChild(clone);
+    });
+}
