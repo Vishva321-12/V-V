@@ -194,3 +194,32 @@ if (logoTrack) {
         logoTrack.appendChild(clone);
     });
 }
+
+// Scroll animation trigger
+function handleScrollAnimation() {
+    const contactSection = document.querySelector('.contact-section');
+    const heading = document.querySelector('.contact-section h2');
+    const intro = document.querySelector('.contact-intro');
+    const contactItems = document.querySelectorAll('.contact-item');
+    const thankYou = document.querySelector('.thank-you');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                heading.classList.add('animate');
+                intro.classList.add('animate');
+                contactItems.forEach(item => {
+                    item.classList.add('animate');
+                });
+                thankYou.classList.add('animate');
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    observer.observe(contactSection);
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', handleScrollAnimation);
