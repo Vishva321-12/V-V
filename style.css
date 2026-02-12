@@ -851,10 +851,12 @@ nav {
   margin: 0 auto;
   display: inline-block;
   width: 0;
+  max-width: fit-content;
 }
 
 .thank-you.animate p {
-  animation: typing 3s steps(60) forwards, blink 0.65s step-end infinite;
+  animation: typing 4s steps(60) forwards, blink 0.75s step-end infinite 2s, removeCursor 0.1s 6s forwards;
+  max-width: fit-content;
 }
 
 @keyframes typing {
@@ -862,7 +864,7 @@ nav {
     width: 0;
   }
   to {
-    width: 100%;
+    width: 73ch;
   }
 }
 
@@ -1200,7 +1202,6 @@ footer {
     border-bottom: 2px solid #d5ad1c;
   }
 
-  /* Creating the gaps between the lines and the text */
   .break-photo::before {
     margin-right: 5px;
   }
@@ -1251,7 +1252,6 @@ footer {
   h1 {
     font-size: 1.8rem;
     letter-spacing: 4px;
-    /* Even tighter for very small screens */
   }
 
   .welcome-text {
