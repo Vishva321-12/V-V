@@ -223,3 +223,15 @@ function handleScrollAnimation() {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', handleScrollAnimation);
+
+//Contact section Border animation
+const observer = new IntersectionObserver((entries)=> {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+        }
+    });
+}, {threshold: 0.5});
+
+observer.observe(document.querySelector('.contact-section'));
+
