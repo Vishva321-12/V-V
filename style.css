@@ -672,7 +672,7 @@ nav {
   max-width: 1200px;
   margin: 80px auto;
   padding: 60px 40px;
-  border-radius: 0px;
+  border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.08);
   position: relative; 
   border: 1px solid transparent;
@@ -692,8 +692,8 @@ nav {
 .border-path {
   stroke: rgb(174, 111, 38);
   stroke-width: 0.4;
-  stroke-dasharray: 400;
-  stroke-dashoffset: 400;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
   transition: stroke-dashoffset 2s ease-in-out;
   stroke-linecap: round;
   stroke-linejoin: round;
